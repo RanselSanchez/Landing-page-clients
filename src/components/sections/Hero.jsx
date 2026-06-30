@@ -2,7 +2,7 @@ import Badge from "../ui/Badge";
 import Button from "../ui/Button";
 import Container from "../ui/Container";
 import DashboardPreview from "../ui/DashboardPreview";
-import Stat from "../ui/Stat";
+import Stats from "../ui/Stats";
 import BackgroundGlow from "../ui/BackgroundGlow";
 import { motion } from "framer-motion";
 
@@ -77,9 +77,7 @@ export default function Hero() {
               variants={fadeUp}
               className="flex gap-10 mt-12"
             >
-              <Stat value="+150" label="Clientes" />
-              <Stat value="+30" label="Proyectos" />
-              <Stat value="5★" label="Calificación" />
+              <Stats />
             </motion.div>
 
           </motion.div>
