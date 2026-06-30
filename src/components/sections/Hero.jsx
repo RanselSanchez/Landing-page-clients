@@ -3,15 +3,31 @@ import Button from "../ui/Button";
 import Container from "../ui/Container";
 import DashboardPreview from "../ui/DashboardPreview";
 import Stat from "../ui/Stat";
+import BackgroundGlow from "../ui/BackgroundGlow";
+import { motion } from "framer-motion";
+
+import {
+  fadeLeft,
+  fadeRight,
+  fadeUp,
+  staggerContainer,
+} from "../../animations";
 
 export default function Hero() {
   return (
     <section
       id="inicio"
-      className="min-h-screen flex items-center pt-24"
+      className="relative overflow-hidden min-h-screen flex items-center pt-24"
+
     >
+      <BackgroundGlow />
       <Container>
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <motion.div
+          className="grid lg:grid-cols-2 gap-20 items-center"
+          variants={staggerContainer}
+          initial="hidden"
+          animate="show"
+        >
 
           {/* Columna izquierda */}
           <div>
@@ -20,7 +36,7 @@ export default function Hero() {
               🚀 Desarrollo Web Profesional
             </Badge>
 
-            <h1 className="text-6xl lg:text-7xl font-extrabold leading-tight mt-8">
+            <h1 className="max-w-2xl text-5xl lg:text-7xl font-black leading-tight mt-8">
               Creamos páginas web que convierten visitantes en clientes.
             </h1>
 
@@ -28,7 +44,10 @@ export default function Hero() {
               Diseñamos sitios web modernos, rápidos y optimizados para ayudar a empresas a crecer y destacar en internet.
             </p>
 
-            <div className="flex gap-4 mt-8">
+            <motion.div
+              variants={fadeUp}
+              className="flex gap-4 mt-8"
+            >
               <Button>
                 Solicitar Cotización
               </Button>
@@ -36,21 +55,35 @@ export default function Hero() {
               <Button variant="outline">
                 Ver Portafolio
               </Button>
-            </div>
+          </motion.div>
+          <div className="flex flex-wrap gap-6 mt-10 text-slate-300">
 
-            <div className="flex gap-10 mt-12">
-              <Stat value="+150" label="Clientes" />
-              <Stat value="+30" label="Proyectos" />
-              <Stat value="5★" label="Calificación" />
-            </div>
+            <span>✔ SEO</span>
+
+            <span>✔ Responsive</span>
+
+            <span>✔ Alto rendimiento</span>
 
           </div>
 
-          {/* Columna derecha */}
-          <DashboardPreview />
+            <motion.div
+              variants={fadeUp}
+              className="flex gap-10 mt-12"
+            >
+            <Stat value="+150" label="Clientes" />
+            <Stat value="+30" label="Proyectos" />
+            <Stat value="5★" label="Calificación" />
+          </motion.div>
 
         </div>
-      </Container>
-    </section>
+
+        {/* Columna derecha */}
+        <motion.div variants={fadeRight}>
+          <DashboardPreview />
+        </motion.div>
+
+      </motion.div>
+    </Container>
+    </section >
   );
 }

@@ -4,6 +4,8 @@ export default function Button({
 
     variant="primary",
 
+    size = "md",
+
     className="",
 
     ...props
@@ -40,30 +42,60 @@ text-white
 
 }
 
+const sizes = {
+
+  sm: `
+    px-4
+    py-2
+    text-sm
+  `,
+
+  md: `
+    px-6
+    py-3
+    text-base
+  `,
+
+  lg: `
+    px-8
+    py-4
+    text-lg
+  `
+
+}
+
 return(
 
 <button
 
 className={`
+  group
+  relative
+  overflow-hidden
 
-px-6
+  inline-flex
+  items-center
+  justify-center
 
-py-3
+  ${sizes[size]}
 
-rounded-2xl
+  rounded-2xl
 
-font-semibold
+  font-semibold
 
-transition-all
+  transition-all
+  duration-300
 
-duration-300
+  hover:-translate-y-1
+  hover:scale-105
 
-hover:scale-105
+  active:scale-95
 
-${variants[variant]}
+  shadow-lg
+  hover:shadow-blue-500/20
 
-${className}
-
+  ${variants[variant]}
+  ${className}
 `}
 
 {...props}

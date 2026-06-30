@@ -3,50 +3,120 @@ import { Users, TrendingUp, Star, Calendar } from "lucide-react";
 export default function DashboardPreview() {
   const stats = [
     {
-      icon: <Users size={18} />,
       label: "Clientes",
       value: "150",
+      icon: <Users className="h-5 w-5 text-cyan-400" />,
     },
     {
-      icon: <TrendingUp size={18} />,
       label: "Ventas",
       value: "+35%",
+      icon: <TrendingUp className="h-5 w-5 text-green-400" />,
     },
     {
-      icon: <Star size={18} />,
       label: "Calificación",
       value: "4.9",
+      icon: <Star className="h-5 w-5 text-yellow-400" />,
     },
     {
-      icon: <Calendar size={18} />,
       label: "Reservas",
       value: "24",
+      icon: <Calendar className="h-5 w-5 text-purple-400" />,
+    },
+  ];
+
+  const cards = [
+    {
+      title: "Clientes",
+      value: "150+",
+      color: "text-cyan-400",
+    },
+    {
+      title: "Ventas",
+      value: "+35%",
+      color: "text-green-400",
+    },
+    {
+      title: "Proyectos",
+      value: "30",
+      color: "text-blue-400",
+    },
+    {
+      title: "Reviews",
+      value: "5★",
+      color: "text-yellow-400",
     },
   ];
 
   return (
-    <div className="rounded-3xl border border-slate-700 bg-slate-900/80 backdrop-blur-xl p-6 shadow-2xl">
-      <h3 className="text-xl font-bold mb-6">
-        RS Dashboard
-      </h3>
+    <div className="rounded-3xl border border-slate-700/50 bg-slate-900/70 backdrop-blur-2xl p-8 shadow-2xl">
+
+      <div className="flex items-center justify-between mb-6">
+        <div>
+          <p className="text-sm text-slate-400">
+            Dashboard
+          </p>
+
+          <h3 className="text-2xl font-bold">
+            RS Web Studio
+          </h3>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <div className="h-3 w-3 rounded-full bg-green-400 animate-pulse" />
+
+          <span className="text-sm text-slate-400">
+            Online
+          </span>
+        </div>
+      </div>
 
       <div className="space-y-4">
+
         {stats.map((item) => (
+
           <div
             key={item.label}
-            className="flex items-center justify-between rounded-xl bg-slate-800 p-4"
+            className="flex items-center justify-between rounded-2xl border border-slate-700 bg-slate-800/60 p-4 transition-all duration-300 hover:border-cyan-400 hover:translate-x-1"
           >
+
             <div className="flex items-center gap-3">
               {item.icon}
               <span>{item.label}</span>
             </div>
 
-            <span className="font-bold text-cyan-400">
+            <span className="text-xl font-bold text-cyan-400">
               {item.value}
             </span>
+
           </div>
+
         ))}
+
       </div>
+
+      <div className="grid grid-cols-2 gap-4 mt-8">
+
+        {cards.map((card) => (
+
+          <div
+            key={card.title}
+            className="rounded-2xl border border-slate-700 bg-slate-800/50 p-4"
+          >
+
+            <p className="text-sm text-slate-400">
+              {card.title}
+            </p>
+
+            <h3 className={`text-2xl font-bold mt-2 ${card.color}`}>
+              {card.value}
+            </h3>
+
+          </div>
+
+        ))}
+
+      </div>
+
     </div>
   );
 }
