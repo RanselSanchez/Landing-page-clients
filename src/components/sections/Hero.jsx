@@ -30,23 +30,24 @@ export default function Hero() {
         >
 
           {/* Columna izquierda */}
-          <div>
+          <motion.div variants={fadeLeft}>
 
             <Badge>
               🚀 Desarrollo Web Profesional
             </Badge>
 
-            <h1 className="max-w-2xl text-5xl lg:text-7xl font-black leading-tight mt-8">
+            <h1
+              className=" mt-8 max-w-2xl text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tight">
               Creamos páginas web que convierten visitantes en clientes.
             </h1>
 
-            <p className="mt-6 text-slate-400 text-lg max-w-xl">
+            <p className=" mt-8 max-w-xl text-lg leading-8 text-slate-400">
               Diseñamos sitios web modernos, rápidos y optimizados para ayudar a empresas a crecer y destacar en internet.
             </p>
 
             <motion.div
               variants={fadeUp}
-              className="flex gap-4 mt-8"
+              className="flex flex-wrap gap-4 mt-10"
             >
               <Button>
                 Solicitar Cotización
@@ -55,35 +56,41 @@ export default function Hero() {
               <Button variant="outline">
                 Ver Portafolio
               </Button>
-          </motion.div>
-          <div className="flex flex-wrap gap-6 mt-10 text-slate-300">
+            </motion.div>
+            <div className=" flex flex-wrap gap-6 mt-10 text-slate-300 font-medium">
 
-            <span>✔ SEO</span>
+              <span className="flex items-center gap-2">
+                ✔ SEO
+              </span>
 
-            <span>✔ Responsive</span>
+              <span className="flex items-center gap-2">
+                ✔ Responsive
+              </span>
 
-            <span>✔ Alto rendimiento</span>
+              <span className="flex items-center gap-2">
+                ✔ Alto rendimiento
+              </span>
 
-          </div>
-
+            </div>
+           <div className="mt-12 border-t border-slate-800"></div>
             <motion.div
               variants={fadeUp}
               className="flex gap-10 mt-12"
             >
-            <Stat value="+150" label="Clientes" />
-            <Stat value="+30" label="Proyectos" />
-            <Stat value="5★" label="Calificación" />
+              <Stat value="+150" label="Clientes" />
+              <Stat value="+30" label="Proyectos" />
+              <Stat value="5★" label="Calificación" />
+            </motion.div>
+
           </motion.div>
 
-        </div>
+          {/* Columna derecha */}
+          <motion.div variants={fadeRight}>
+            <DashboardPreview />
+          </motion.div>
 
-        {/* Columna derecha */}
-        <motion.div variants={fadeRight}>
-          <DashboardPreview />
         </motion.div>
-
-      </motion.div>
-    </Container>
+      </Container>
     </section >
   );
 }
