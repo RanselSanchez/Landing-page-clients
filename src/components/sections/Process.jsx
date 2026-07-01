@@ -7,7 +7,7 @@ export default function Process() {
   return (
     <section
       id="proceso"
-      className="py-28 bg-slate-50"
+      className="py-28 bg-slate-950"
     >
       <Container>
 
@@ -26,11 +26,12 @@ export default function Process() {
 
               <div
                 className="
-                  bg-white
+                  bg-slate-900/60
                   rounded-3xl
                   p-8
                   border
-                  border-slate-200
+                  border-slate-700
+                  backdrop-blur-xl
                   shadow-sm
                   transition-all
                   duration-300

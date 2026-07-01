@@ -7,7 +7,7 @@ export default function Services() {
   return (
     <section
       id="servicios"
-      className="py-24 bg-white"
+      className="py-28 bg-slate-950"
     >
       <Container>
 
