@@ -10,16 +10,14 @@ const services = [
   {
     id: 2,
     title: "Landing Pages",
-    description:
-      "Páginas enfocadas en generar ventas y captar prospectos.",
+    description: "Páginas enfocadas en generar ventas y captar prospectos.",
     icon: "website",
     featured: false,
   },
   {
     id: 3,
     title: "Tiendas Online",
-    description:
-      "Catálogos y comercio electrónico para vender 24/7.",
+    description: "Catálogos y comercio electrónico para vender 24/7.",
     icon: "ecommerce",
     featured: false,
   },

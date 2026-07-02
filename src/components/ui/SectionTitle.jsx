@@ -1,29 +1,15 @@
-export default function SectionTitle({
+export default function SectionTitle({ title, subtitle, align = "left" }) {
+  const isCenter = align === "center";
 
-title,
+  return (
+    <div className={`${isCenter ? "mx-auto text-center" : ""} max-w-3xl`}>
+      <p className="text-sm font-bold uppercase tracking-[0.22em] text-cyan-400">
+        {subtitle}
+      </p>
 
-subtitle
-
-}){
-
-return(
-
-<div className="mb-16">
-
-<p className="text-blue-400 font-semibold">
-
-{subtitle}
-
-</p>
-
-<h2 className="text-5xl font-bold mt-3">
-
-{title}
-
-</h2>
-
-</div>
-
-)
-
+      <h2 className="mt-4 text-3xl font-black leading-tight text-white sm:text-4xl lg:text-5xl">
+        {title}
+      </h2>
+    </div>
+  );
 }

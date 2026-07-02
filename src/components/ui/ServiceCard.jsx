@@ -1,9 +1,4 @@
-import {
-  Monitor,
-  LayoutPanelTop,
-  ShoppingCart,
-} from "lucide-react";
-
+import { LayoutPanelTop, Monitor, ShoppingCart } from "lucide-react";
 import Card from "./Card";
 
 const icons = {
@@ -13,36 +8,21 @@ const icons = {
 };
 
 export default function ServiceCard({ service }) {
-
   const Icon = icons[service.icon];
 
   return (
     <Card className="group h-full">
-
-      <div className="w-16 h-16 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
-
-        {Icon && <Icon size={34} />}
-
+      <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-300 ring-1 ring-cyan-400/20">
+        {Icon && <Icon size={28} />}
       </div>
 
-      <h3 className="text-2xl font-bold mb-4">
+      <h3 className="text-2xl font-black text-white">{service.title}</h3>
 
-        {service.title}
+      <p className="mt-4 leading-7 text-slate-400">{service.description}</p>
 
-      </h3>
-
-      <p className="text-gray-600 leading-7">
-
-        {service.description}
-
-      </p>
-
-      <button className="mt-8 font-semibold text-blue-600">
-
+      <button className="mt-7 font-bold text-cyan-300 transition-colors group-hover:text-cyan-200">
         Más información →
-
       </button>
-
     </Card>
   );
 }

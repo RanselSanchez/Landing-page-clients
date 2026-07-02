@@ -9,7 +9,7 @@ const business = {
 
   email: "info@rswebstudio.com",
 
- 
+ linkedin: "https://www.linkedin.com/in/ransel-emil-sanchez-ventura-5209a7228/"
 };
 
 export default business;

@@ -1,35 +1,25 @@
 import Container from "../ui/Container";
 
 export default function TrustedBy() {
-  const companies = [
-    "TechNova",
-    "Nova Café",
-    "Elite Gym",
-    "AutoPro",
-    "Dental Plus",
-  ];
+  const companies = ["TechNova", "Nova Café", "Elite Gym", "AutoPro", "Dental Plus"];
 
   return (
-    <section className="py-16 border-y border-slate-800">
+    <section className="border-y border-slate-800/80 bg-slate-950/80 py-12">
       <Container>
-
-        <p className="text-center text-slate-400 uppercase tracking-widest text-sm mb-10">
+        <p className="mb-8 text-center text-xs font-bold uppercase tracking-[0.24em] text-slate-500 sm:text-sm">
           Empresas que confían en nuestro trabajo
         </p>
 
-        <div className="flex flex-wrap justify-center items-center gap-12">
-
+        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-5">
           {companies.map((company) => (
             <span
               key={company}
-              className="text-2xl font-bold text-slate-500 hover:text-white transition-colors duration-300"
+              className="text-xl font-black text-slate-500 transition-colors duration-300 hover:text-white sm:text-2xl"
             >
               {company}
             </span>
           ))}
-
         </div>
-
       </Container>
     </section>
   );
