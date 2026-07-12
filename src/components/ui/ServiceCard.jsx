@@ -1,4 +1,4 @@
-import { LayoutPanelTop, Monitor, ShoppingCart } from "lucide-react";
+﻿import { LayoutPanelTop, Monitor, ShoppingCart } from "lucide-react";
 import Card from "./Card";
 
 const icons = {
@@ -21,7 +21,7 @@ export default function ServiceCard({ service }) {
       <p className="mt-4 leading-7 text-slate-400">{service.description}</p>
 
       <button className="mt-7 font-bold text-cyan-300 transition-colors group-hover:text-cyan-200">
-        Más información →
+      
       </button>
     </Card>
   );

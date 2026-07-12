@@ -3,11 +3,11 @@ const business = {
 
   slogan: "Impulsamos tu negocio con presencia digital profesional",
 
-  phone: "8095555555",
+  phone: "8294108280",
 
-  whatsapp: "18095555555",
+  whatsapp: "18294108280",
 
-  email: "info@rswebstudio.com",
+  email: "ranselsanchez03@gmail.com",
 
  linkedin: "https://www.linkedin.com/in/ransel-emil-sanchez-ventura-5209a7228/"
 };
