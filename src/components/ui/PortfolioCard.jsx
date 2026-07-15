@@ -29,10 +29,13 @@ export default function PortfolioCard({ project }) {
         </div>
 
         <div className="mt-7">
-          <Button>
+          <a href={project.url} target="_blank" rel="noreferrer">
+             <Button>
             Ver Proyecto
             <ArrowUpRight size={18} />
           </Button>
+          </a>
+         
         </div>
       </div>
     </Card>

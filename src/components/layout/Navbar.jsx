@@ -8,11 +8,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed left-0 top-0 z-50 w-full transition-all duration-300 ${
-        scrolled
+      className={`fixed left-0 top-0 z-50 w-full transition-all duration-300 ${scrolled
           ? "border-b border-slate-800/80 bg-slate-950/85 shadow-lg shadow-slate-950/30 backdrop-blur-xl"
           : "bg-slate-950/35 backdrop-blur-sm"
-      }`}
+        }`}
     >
       <Container>
         <nav className="flex h-20 items-center justify-between gap-4">
@@ -35,9 +34,15 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <Button size="sm" className="hidden sm:inline-flex">
-            Cotizar
-          </Button>
+          <a
+            href="https://wa.me/1829418280?text=Hola,%20quiero%20una%20cotización"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button>
+              Cotizar
+            </Button>
+          </a>
         </nav>
       </Container>
     </header>

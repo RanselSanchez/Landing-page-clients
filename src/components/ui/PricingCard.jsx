@@ -1,13 +1,13 @@
 import Card from "./Card";
 import Button from "./Button";
 import { Check } from "lucide-react";
+import business from "../../config/busimess";
 
 export default function PricingCard({ plan }) {
   return (
     <Card
-      className={`relative h-full ${
-        plan.featured ? "border-cyan-400 shadow-2xl shadow-cyan-500/15" : ""
-      }`}
+      className={`relative h-full ${plan.featured ? "border-cyan-400 shadow-2xl shadow-cyan-500/15" : ""
+        }`}
     >
       {plan.featured && (
         <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-cyan-400 px-5 py-2 text-sm font-black text-slate-950">
@@ -32,7 +32,16 @@ export default function PricingCard({ plan }) {
       </ul>
 
       <div className="mt-9">
-        <Button className="w-full">Elegir Plan</Button>
+        <a
+          href={`https://wa.me/18294108280?text=${encodeURIComponent(
+            `Hola, quiero información sobre el plan ${plan.name}.`
+          )}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Button className="w-full">Elegir Plan</Button>
+        </a>
+
       </div>
     </Card>
   );

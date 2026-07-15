@@ -26,10 +26,15 @@ export default function CTA() {
             </p>
 
             <div className="mt-9">
-              <Button size="lg">
-                Solicitar Cotización
-                <ArrowRight size={20} />
-              </Button>
+              <a
+                href="https://wa.me/18294108280?text=Hola,%20quiero%20una%20cotización"
+                target="_blank"
+                rel="noreferrer"
+              ><Button size="lg">
+                  Solicitar Cotización
+                  <ArrowRight size={20} />
+                </Button></a>
+
             </div>
 
             <div className="mt-9 flex flex-wrap justify-center gap-x-7 gap-y-3 text-sm font-semibold text-slate-300 sm:text-base">

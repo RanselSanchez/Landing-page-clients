@@ -47,7 +47,17 @@ export default function Footer() {
               <a href={business.linkedin} target="_blank" rel="noreferrer" className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-900 text-white transition-colors hover:bg-cyan-500" aria-label="LinkedIn">
                 <FaLinkedinIn size={18} />
               </a>
-              <a href={`mailto:${business.email}`} className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-900 text-white transition-colors hover:bg-cyan-500" aria-label="Correo">
+              <a
+                href={`https://mail.google.com/mail/?view=cm&fs=1&to=${business.email}&su=${encodeURIComponent(
+                  "Solicitud de cotización"
+                )}&body=${encodeURIComponent(
+                  "Hola, quiero más información sobre sus servicios."
+                )}`}
+                target="_blank"
+                rel="noreferrer"
+                className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-900 text-white transition-colors hover:bg-cyan-500"
+                aria-label="Gmail"
+              >
                 <Mail size={18} />
               </a>
               <a href={`https://wa.me/${business.whatsapp}`} target="_blank" rel="noreferrer" className="flex h-11 w-11 items-center justify-center rounded-xl bg-slate-900 text-white transition-colors hover:bg-emerald-500" aria-label="WhatsApp">

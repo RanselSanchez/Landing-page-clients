@@ -36,14 +36,19 @@ export default function Hero() {
             </p>
 
             <motion.div variants={fadeUp} className="mt-9 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-              <Button size="lg" className="w-full sm:w-auto">
+              <a href="#contacto">
+                 <Button size="lg" className="w-full sm:w-auto">
                 Solicitar Cotización
                 <ArrowRight size={20} />
               </Button>
-
-              <Button variant="outline" size="lg" className="w-full sm:w-auto">
+              </a>
+            
+              <a href="#portafolio">
+                  <Button variant="outline" size="lg" className="w-full sm:w-auto">
                 Ver Portafolio
               </Button>
+              </a>
+            
             </motion.div>
 
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-slate-300 sm:text-base">
