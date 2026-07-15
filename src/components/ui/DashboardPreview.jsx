@@ -1,19 +1,50 @@
-import { Calendar, Star, TrendingUp, Users } from "lucide-react";
+import { Calendar, Star, TrendingUp, Users, Mail, MessageCircle, Monitor, Search } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function DashboardPreview() {
   const stats = [
-    { label: "Clientes", value: "150", icon: <Users className="h-5 w-5 text-cyan-300" /> },
-    { label: "Ventas", value: "+35%", icon: <TrendingUp className="h-5 w-5 text-emerald-300" /> },
-    { label: "Calificación", value: "4.9", icon: <Star className="h-5 w-5 text-amber-300" /> },
-    { label: "Reservas", value: "24", icon: <Calendar className="h-5 w-5 text-blue-300" /> },
+    {
+      label: "Diseño responsive",
+      value: "Listo",
+      icon: <Monitor className="h-5 w-5 text-cyan-300" />,
+    },
+    {
+      label: "WhatsApp integrado",
+      value: "Listo",
+      icon: <MessageCircle className="h-5 w-5 text-emerald-300" />,
+    },
+    {
+      label: "Formulario",
+      value: "Listo",
+      icon: <Mail className="h-5 w-5 text-blue-300" />,
+    },
+    {
+      label: "SEO básico",
+      value: "En progreso",
+      icon: <Search className="h-5 w-5 text-amber-300" />,
+    },
   ];
-
   const cards = [
-    { title: "Clientes", value: "150+", color: "text-cyan-300" },
-    { title: "Ventas", value: "+35%", color: "text-emerald-300" },
-    { title: "Proyectos", value: "30", color: "text-blue-300" },
-    { title: "Reviews", value: "5★", color: "text-amber-300" },
+    {
+      title: "Entrega",
+      value: "7-15 días",
+      color: "text-cyan-300",
+    },
+    {
+      title: "Diseño",
+      value: "A medida",
+      color: "text-emerald-300",
+    },
+    {
+      title: "Mobile",
+      value: "100%",
+      color: "text-blue-300",
+    },
+    {
+      title: "Soporte",
+      value: "Inicial",
+      color: "text-amber-300",
+    },
   ];
 
   return (
@@ -25,7 +56,7 @@ export default function DashboardPreview() {
       <div className="mb-6 flex items-center justify-between gap-4">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Dashboard</p>
-          <h3 className="mt-1 text-xl font-black text-white sm:text-2xl">RS Web Studio</h3>
+          <h3 className="mt-1 text-xl font-black text-white sm:text-2xl">Proyecto para tu negocio</h3>
         </div>
 
         <div className="flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-sm text-emerald-200">

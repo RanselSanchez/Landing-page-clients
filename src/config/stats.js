@@ -1,18 +1,18 @@
 const stats = [
   {
     id: 1,
-    value: "+150",
-    label: "Clientes",
+    value: "100%",
+    label: "Responsive",
   },
   {
     id: 2,
-    value: "+30",
-    label: "Proyectos",
+    value: "SEO",
+    label: "Básico incluido",
   },
   {
     id: 3,
-    value: "5★",
-    label: "Valoración",
+    value: "WhatsApp",
+    label: "Integrado",
   },
 ];
 
